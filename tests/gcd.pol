@@ -1,0 +1,14 @@
+declare mut varA: int = 12; // **Declares** a mutable variable. Declares sets a global scope rather than locally. We can see it in the function more clearly.
+declare mut varB: int = 15;
+
+declare fn gcd(a: int, b: int) -> int { // **Declares** a function, which allows it to be used globally. like mutability. Declaration is mutable, definition is immutable.
+    if (a == 0) {
+        return b;
+    }
+    return a % b;
+}
+
+fn main() -> int {
+    declare varC = @gcd(varA,varB);
+    @printU(varC); // uses printU or universal print which allows it to take any type and print it.
+}
